@@ -1,0 +1,48 @@
+<!doctype html>
+<html ng-app="myApp" lang="en"> 
+    
+<head>
+    <title>User Login and Sessions</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="/stylesheets/style.css" />
+</head>
+        
+<body>
+    
+    <div class="jumbotron text-center">
+        <h1>Arctic Chatter</h1>
+    </div>
+    <div class="parallax"></div>
+    <div id="container">
+    <div ng-controller="myController">
+        <h2 id="welcomeText">Welcome <%= username %>! You are Logged In!
+            
+        </h2>
+        <a id="logoutLink" href="/logout">logout</a>
+        <a id="editLink" href="/user">Edit User</a><br>
+        <span>
+            <img id="profilePic" src="<%= image %>"/>
+        </span>
+        <p>Place Your Code Here
+            <p>
+    </div>
+    <hr>
+    <span id="indexMsg">
+        <%= msg %>
+    </span>
+    <hr>
+    <span id="colorText" style="color:<%= color %>">
+    Color
+        <%= color %>
+      </span>
+      </div>
+      <div class="parallax"></div>
+    <script src="http://code.angularjs.org/1.2.9/angular.min.js"></script>
+    <script src="/javascripts/my_app.js"></script>
+</body>
+      
+</html>
